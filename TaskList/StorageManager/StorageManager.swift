@@ -33,4 +33,10 @@ final class StorageManager {
             }
         }
     }
+    
+    func removeRecord(_ item:NSManagedObject) {
+        let context = persistentContainer.viewContext
+        
+        context.delete(item)
+    }
 }

@@ -75,6 +75,20 @@ extension TaskListViewController {
         cell.contentConfiguration = content
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { [unowned self] (_, _, completion) in
+            
+            storageManager.removeRecord(taskList[indexPath.row])
+            
+            taskList.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            
+            storageManager.saveContext()
+        }
+        
+        return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
 }
 
 // MARK: - Setup UI
