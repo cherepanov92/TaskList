@@ -44,7 +44,6 @@
 		A80708A02BB5DACF00128186 = {
 			isa = PBXGroup;
 			children = (
-				CE9E927A2E4123D500DA38D8 /* StorageManager */,
 				A80708AB2BB5DACF00128186 /* TaskList */,
 				A80708AA2BB5DACF00128186 /* Products */,
 			);
@@ -61,6 +60,7 @@
 		A80708AB2BB5DACF00128186 /* TaskList */ = {
 			isa = PBXGroup;
 			children = (
+				CE9E927A2E4123D500DA38D8 /* StorageManager */,
 				CE9E92792E41229600DA38D8 /* Services */,
 				CE9E92782E41220500DA38D8 /* App */,
 				CE9E92772E4121E800DA38D8 /* Storyboards */,
